@@ -8,6 +8,7 @@ import flowerThree from "../Images/abt-flower3.png";
 import businesssvgOne from "../Images/business-svg1.png";
 import businesssvgthree from "../Images/business-svg3.png";
 import truck from "../Images/map-truck-img.png";
+import { Link } from "react-router-dom";
 
 const WelcomePage = () => {
   const [activeFlower, setActiveFlower] = useState(1);
@@ -37,9 +38,11 @@ const WelcomePage = () => {
         <div className="relative h-full flex flex-col justify-center items-center text-center text-white">
           <h1 className="text-5xl font-bold">Welcome to Loom Diary</h1>
           <p className="text-2xl mt-4">Power-Loom Management Made Simple</p>
-          <button className="bg-gradient-to-r from-green-400 to-green-600 text-white font-bold py-3 px-6 rounded-full shadow-md transform hover:scale-105 transition-transform duration-300 mt-8">
-            Login
-          </button>
+          <Link to="/login">
+            <button className="bg-gradient-to-r from-green-400 to-green-600 text-white font-bold py-3 px-6 rounded-full shadow-md transform hover:scale-105 transition-transform duration-300 mt-8">
+              Login
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -149,7 +152,10 @@ const WelcomePage = () => {
           src={truck}
           alt="Business svg one"
           className="absolute bottom-0 left-80 w-[15%] h-auto hidden md:block"
-          style={{ zIndex: "1",  animation: "slideRight 5s infinite ease-in-out", }}
+          style={{
+            zIndex: "1",
+            animation: "slideRight 5s infinite ease-in-out",
+          }}
         />
       </div>
 
